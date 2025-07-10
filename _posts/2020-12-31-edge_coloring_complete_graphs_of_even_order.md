@@ -1,11 +1,12 @@
 ---
 title: Edge Coloring Complete Graphs of Even Order
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 Recently, I rediscovered a special case of [Baranyani's
 Theorem](https://en.wikipedia.org/wiki/Baranyai%27s_theorem). Specifically, that

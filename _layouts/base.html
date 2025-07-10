@@ -2,6 +2,49 @@
 # Have some default values
 stylesheet: index
 libs: []
+
+# We give posts the ability to configure some libraries. The configuration
+# options are given by the following YAML schema.
+#
+# type: object
+# additionalProperties: false
+# properties:
+#     mathjax:
+#         type: object
+#         properties:
+#             declarations:
+#                 type: array
+#                 description: |
+#                   A list of new commands to define. These will be expanded to
+#                   a set of `\newcommand` declarations.
+#                 items:
+#                     type: object
+#                     additionalProperties: false
+#                     properties:
+#                         name:
+#                             type: string
+#                             description: |
+#                               The name of the new command, including the
+#                               backslash.
+#                         value:
+#                             type: string
+#                             description: |
+#                               The value the command expands to.
+#                         nargs:
+#                             type: integer
+#                             description: |
+#                               The number of arguments the command takes.
+#                             default: 0
+#                     required:
+#                       - name
+#                       - value
+#     mermaidjs:
+#         type: object
+#         additionalProperties: true
+#         description: |
+#           Configuration options for MermaidJS. These will be unioned with the
+#           default configuration.
+#         properties: {}
 ---
 
 <!DOCTYPE html>
@@ -125,6 +168,22 @@ libs: []
                 </div>
             </div>
         </nav>
+
+        {% comment %}
+            MathJax declarations, if the post has them. This has to go in the
+            body.
+        {% endcomment %}
+        {% if page.libs_config.mathjax.declarations %}
+            <div class="d-none">
+                {% for declaration in page.libs_config.mathjax.declarations %}
+                    @@\newcommand
+                        { {{declaration.name}} }
+                        {% if declaration.nargs %} [{{declaration.nargs}}] {% endif %}
+                        { {{declaration.value}} }
+                    @@
+                {% endfor %}
+            </div>
+        {% endif %}
 
         <div id="content">
             {{ content }}

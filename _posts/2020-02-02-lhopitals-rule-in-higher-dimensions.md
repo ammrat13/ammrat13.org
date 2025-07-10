@@ -1,11 +1,12 @@
 ---
 title: L'H&ocirc;pital's Rule in Higher Dimensions
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 *This post is taken from an email I wrote to Dr. Shuenn Siang Ng and (now) Dr.
 Santana Afton. They were my professor and my TA respectively for MATH 2551:

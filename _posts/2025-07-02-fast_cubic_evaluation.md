@@ -3,16 +3,16 @@ title: Algorithms for Fast Cubic Evaluation
 tags: ["mathematics", "algorithms"]
 libs: ["mathjax", "mermaidjs"]
 libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
     mermaidjs:
         flowchart:
             padding: 0
             nodeSpacing: 25
             rankSpacing: 25
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 It's been a while; a lot's happened. I got accepted to Stanford's MS CS program,
 and I even graduated from there last month. During my last quarter there, I took

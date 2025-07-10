@@ -1,11 +1,12 @@
 ---
 title: Estimating Logistic Virus Transmission
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 Recently, I've been working on invent**summer**, a part of
 [inventXYZ](https://inventxyz.com). It's run by my friend and some of his

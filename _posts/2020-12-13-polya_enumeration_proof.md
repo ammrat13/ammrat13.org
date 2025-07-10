@@ -1,15 +1,24 @@
 ---
 title: A Proof of Pólya's Enumeration Theorem
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
+          - name: \cyc
+            value: \text{NumCycles}(#1)
+            nargs: 1
+          - name: \nstab
+            value: \text{NumStabilized}(#1)
+            nargs: 1
+          - name: \Stab
+            value: \text{Stab}(#1)
+            nargs: 1
+          - name: \Orb
+            value: \text{Orb}(#1)
+            nargs: 1
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-    @@\newcommand{\cyc}[1]{\text{NumCycles}(#1)}@@
-    @@\newcommand{\nstab}[1]{\text{NumStabilized}(#1)}@@
-    @@\newcommand{\Stab}[1]{\text{Stab}(#1)}@@
-    @@\newcommand{\Orb}[1]{\text{Orb}(#1)}@@
-</div>
 
 This semester, I took [MATH 3012](http://math.gatech.edu/courses/math/3012), a
 discrete math course with Dr. Ernest Croot. It was an interesting class,

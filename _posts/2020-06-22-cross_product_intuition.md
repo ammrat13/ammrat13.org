@@ -1,11 +1,12 @@
 ---
 title: Some Intuition for Why the Cross Product Works
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 For some reason, the cross product has always been somewhat mysterious to me.
 At least, more so than the dot product. With the latter, there are many easy

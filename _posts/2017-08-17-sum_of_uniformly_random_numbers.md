@@ -1,13 +1,16 @@
 ---
 title: The Sums of Random Numbers on [0,1]
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
+          - name: \Ex
+            value: \text{Ex}
+          - name: \C
+            value: \text{C}
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\Ex}{\text{Ex}}@@
-    @@\newcommand{\C}{\text{C}}@@
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 _This post used to be hosted on my [GitHub](https://github.com/ammrat13),
 but I felt it would fit better here. I found this fact online somewhere, and I
@@ -29,23 +32,23 @@ inelegant but functional proof of that fact.
 First, we will work out the probability of choosing @@n@@ numbers @@X_1, X_2,
 \dots, X_n@@ uniformly at random on @@[0,d]@@ for arbitrary @@d@@ and having
 their sum less than or equal to @@d@@, which we designate @@\Pr[S(n,d)]@@. We
-claim that 
-%% \Pr[S(n,d)] = \frac{1}{n!} %% 
+claim that
+%% \Pr[S(n,d)] = \frac{1}{n!} %%
 regardless of @@d@@, and we will prove that claim by induction. First, it is
-clear that 
-%% \Pr[S(1,d)] = 1 = \frac{1}{1!} %% 
+clear that
+%% \Pr[S(1,d)] = 1 = \frac{1}{1!} %%
 as the one number chosen, because it was chosen on @@[0,d]@@, cannot be greater
 than @@d@@, thus establishing our base case.
 
 We then assume that the claim holds for @@n-1@@ and lower as our induction
-hypothesis. We then look at 
-%% \Pr[S(n,d)] = \int_0^d \frac{1}{d} \Pr[S(n,d) \mid X_1 = x] dx %% 
+hypothesis. We then look at
+%% \Pr[S(n,d)] = \int_0^d \frac{1}{d} \Pr[S(n,d) \mid X_1 = x] dx %%
 (with @@1/d@@ being used as the numbers picked have a uniform distribution on an
 interval of length @@d@@). Intuitively, this can be seen as iterating over all
 the possible values @@X_1@@ could take and taking their weighted average, just
-as we may do in the discrete case. We then observe that 
+as we may do in the discrete case. We then observe that
 \\begin{align\*}
-\Pr[S(n,d) \mid X_1 = x] &= \Pr\left[(X_2,\dots,X_n \leq d-x) \cap \left(\sum_{i=2}^n X_i \leq d-x \right) \right] \\\\ 
+\Pr[S(n,d) \mid X_1 = x] &= \Pr\left[(X_2,\dots,X_n \leq d-x) \cap \left(\sum_{i=2}^n X_i \leq d-x \right) \right] \nl
     &= \Pr[(X_2,\dots,X_n \leq d-x)] \cdot \Pr[S(n-1,d-x)].
 \\end{align\*}
 In other words, we observe that the probability that the sum of all the @@n@@
@@ -61,8 +64,8 @@ on @@[0,d-x]@@ when chosen on @@[0,d]@@, and the second term coming from our
 induction hypothesis. Substituting that back into the integral, we get
 \\begin{align\*}
 \Pr[S(n,d)] &= \frac{1}{d^n(n-1)!}\int_0^d (d-x)^{n-1} dx \nl
-	&= \frac{1}{d^n(n-1)!}\cdot\frac{d^n}{n} \nl
-	&= \frac{1}{n!}
+    &= \frac{1}{d^n(n-1)!}\cdot\frac{d^n}{n} \nl
+    &= \frac{1}{n!}
 \\end{align\*}
 as required.
 
@@ -70,16 +73,16 @@ Now that we have found the probability choosing @@n@@ numbers uniformly at
 random on @@[0,d]@@ and having their sum not exceed @@d@@, we are ready to
 calculate the expected number of numbers required to have their sum exceed
 @@d=1@@. We designate @@N@@ to be the number of numbers chosen on @@[0,1]@@
-required for their sum to exceed @@1@@, and we see that 
+required for their sum to exceed @@1@@, and we see that
 %% \Ex[N] = \sum_{i=1}^\infty i \cdot \Pr[N=i]. %%
 We then observe that @@\Pr[N=i]@@ is the probability that the sum of  @@i-1@@
 random numbers on @@[0,1]@@ does not exceed @@1@@, but the sum of @@i@@ numbers
 does. In other words
 \\begin{align\*}
 \Pr[N=i] &= \Pr\left[S(i-1,1) \cap S(i,1)^\C\right] \nl
-	&= \Pr[S(i-1,1)] \cdot \Pr\left[S(i,1)^\C \mid S(i-1,1)\right] \nl
-	&= \Pr[S(i-1,1)] \cdot \left(1-\Pr\left[S(i,1) \mid S(i-1,1)\right]\right) \nl
-	&= \Pr[S(i-1,1)] \cdot \left(1-\frac{\Pr[S(i,1) \cap S(i-1,1)]}{\Pr[S(i-1,1)]}\right)
+    &= \Pr[S(i-1,1)] \cdot \Pr\left[S(i,1)^\C \mid S(i-1,1)\right] \nl
+    &= \Pr[S(i-1,1)] \cdot \left(1-\Pr\left[S(i,1) \mid S(i-1,1)\right]\right) \nl
+    &= \Pr[S(i-1,1)] \cdot \left(1-\frac{\Pr[S(i,1) \cap S(i-1,1)]}{\Pr[S(i-1,1)]}\right)
 \end{align\*}
 We then see that @@S(i,1)@@ implies @@S(i-1,1)@@. It is impossible to pick @@i@@
 numbers on @@[0,1]@@ and have their sum not exceed @@1@@ without first picking
@@ -87,16 +90,16 @@ numbers on @@[0,1]@@ and have their sum not exceed @@1@@ without first picking
 S(i-1,1)]=\Pr[S(i,1)]@@ and
 \\begin{align\*}
 \Pr[N=i] &= \Pr[S(i-1,1)] \cdot \left(1-\frac{\Pr[S(i,1)]}{\Pr[S(i-1,1)]}\right) \nl
-	&= \frac{1}{(i-1)!} \cdot \left(1 - \frac{\frac{1}{i!}}{\frac{1}{(i-1)!}}\right) \nl
-	&= \frac{1}{(i-1)!} \cdot \left(1-\frac{1}{i}\right) \nl
-	&= \frac{i-1}{i!}.
+    &= \frac{1}{(i-1)!} \cdot \left(1 - \frac{\frac{1}{i!}}{\frac{1}{(i-1)!}}\right) \nl
+    &= \frac{1}{(i-1)!} \cdot \left(1-\frac{1}{i}\right) \nl
+    &= \frac{i-1}{i!}.
 \\end{align\*}
-Substituting this back into our sum then manipulating it shows that 
+Substituting this back into our sum then manipulating it shows that
 \\begin{align\*}
-\Ex[N] &= \sum_{i=1}^\infty i \cdot \frac{i-1}{i!} \nl 
-	&= 0 + \sum_{i=2}^\infty i \cdot \frac{i-1}{i!} \nl
-	&= \sum_{i=2}^\infty \frac{1}{(i-2)!} \nl
-	&= \sum_{i=0}^\infty \frac{1}{i!} \nl
+\Ex[N] &= \sum_{i=1}^\infty i \cdot \frac{i-1}{i!} \nl
+    &= 0 + \sum_{i=2}^\infty i \cdot \frac{i-1}{i!} \nl
+    &= \sum_{i=2}^\infty \frac{1}{(i-2)!} \nl
+    &= \sum_{i=0}^\infty \frac{1}{i!} \nl
 \Ex[N] &= e
 \\end{align\*}
 as required. It should be noted that there is nothing special about @@1@@. It

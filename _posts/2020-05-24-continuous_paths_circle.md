@@ -1,6 +1,6 @@
 ---
 title: Parametrizing Continuous Paths on a Circle
-libs: [mathjax]
+libs: ["mathjax"]
 ---
 
 I've been meaning to write this for some time now, partially as a follow up to

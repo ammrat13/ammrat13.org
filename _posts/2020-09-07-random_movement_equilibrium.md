@@ -1,11 +1,12 @@
 ---
 title: Equilibrium in Normal  Random Movement
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 In my [last post]({{page.previous.url}}), I touched on my efforts to model how a
 simple "virus" moves through a population, mainly through the lens of
