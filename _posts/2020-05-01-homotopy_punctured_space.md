@@ -1,6 +1,6 @@
 ---
 title: Fundamental Groups in Punctured Space
-libs: [mathjax]
+libs: ["mathjax"]
 ---
 
 When learning concepts in math, I often find it helpful to look at "toy"

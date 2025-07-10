@@ -1,15 +1,22 @@
 ---
 title: "DEF CON CTF 2022 Qualifiers: Same Old"
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
+          - name: \FF
+            value: \mathbb{F}
+          - name: \ZZ
+            value: \mathbb{Z}
+          - name: \matr
+            value: \mathbf{#1}
+            nargs: 1
+          - name: \vect
+            value: \mathbf{#1}
+            nargs: 1
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-    @@\newcommand{\FF}{\mathbb{F}}@@
-    @@\newcommand{\ZZ}{\mathbb{Z}}@@
-    @@\newcommand{\matr}[1]{\mathbf{#1}}@@
-    @@\newcommand{\vect}[1]{\mathbf{#1}}@@
-</div>
 
 My family came over for my sister's graduation, so I chose to spend time with
 them instead of competing in the 2022 DEF CON CTF Qualifiers. Still, I briefly

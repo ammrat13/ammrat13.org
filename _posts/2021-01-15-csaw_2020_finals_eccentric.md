@@ -1,24 +1,44 @@
 ---
 title: "CSAW CTF 2020 Finals: Eccentric"
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
+          - name: \ZZ
+            value: \mathbb{Z}
+          - name: \QQ
+            value: \mathbb{Q}
+          - name: \RR
+            value: \mathbb{R}
+          - name: \FF
+            value: \mathbb{F}_{#1}
+            nargs: 1
+          - name: \ecid
+            value: \mathcal{O}
+          - name: \hex
+            value: \texttt{0x#1}
+            nargs: 1
+          - name: \rep
+            value: \overline{#1}
+            nargs: 1
+          - name: \degr
+            value: \deg(#1)
+            nargs: 1
+          - name: \kernl
+            value: \ker(#1)
+            nargs: 1
+          - name: \chin
+            value: \Delta {#1}
+            nargs: 1
+          - name: \BigO
+            value: \mathcal{O}(#1)
+            nargs: 1
+          - name: \modulo
+            value: \text{ mod } {#1}
+            nargs: 1
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-    @@\newcommand{\FF}[1]{\mathbb{F}_{#1}}@@
-    @@\newcommand{\ZZ}{\mathbb{Z}}@@
-    @@\newcommand{\QQ}{\mathbb{Q}}@@
-    @@\newcommand{\RR}{\mathbb{R}}@@
-    @@\newcommand{\ecid}{\mathcal{O}}@@
-    @@\newcommand{\hex}[1]{\texttt{0x#1}}@@
-    @@\newcommand{\rep}[1]{\overline{#1}}@@
-    @@\newcommand{\degr}[1]{\deg(#1)}@@
-    @@\newcommand{\kernl}[1]{\ker(#1)}@@
-    @@\newcommand{\chin}[1]{\Delta #1}@@
-    @@\newcommand{\BigO}[1]{\mathcal{O}(#1)}@@
-    @@\newcommand{\modulo}[1]{\text{ mod } #1}@@
-    @@\newcommand{\modfunc}[2]{\text{mod}(#1,#2)}@@
-</div>
 
 I was a finalist for [CSAW CTF 2020](https://csaw.io). I was on the Mad H@tters'
 team, and I swept the cryptography challenges. They were all interesting, and I

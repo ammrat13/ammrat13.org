@@ -1,11 +1,12 @@
 ---
 title: Some Thoughts on Fundamental Groups
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
 
 During a Multivariable Calculus review session, we were talking about simply
 connected sets. That is, sets where loops can be continuously "contracted" down
@@ -28,10 +29,10 @@ homotopic to itself under @@h(r,t) = \gamma(r)@@ for all @@t@@. If @@\gamma_1@@
 is homotopic to @@\gamma_2@@ under @@h(r,t)@@, then the reverse is true under
 @@h(r,1-t)@@.  Finally, if @@\gamma_1@@ is homotopic to @@\gamma_2@@ under
 @@h@@, and @@\gamma_2@@ is homotopic to @@\gamma_3@@ under @@g@@, then we may
-define a homotopy between @@\gamma_1@@ and @@\gamma_3@@ as 
+define a homotopy between @@\gamma_1@@ and @@\gamma_3@@ as
 %% f(r,t) = \begin{cases}
     h(r,2t) & t \leq \frac{1}{2} \nl
-    g(r,2t-1) & t \geq \frac{1}{2} 
+    g(r,2t-1) & t \geq \frac{1}{2}
 \end{cases}, %%
 which is continuous despite being peicewise.
 
@@ -48,7 +49,7 @@ starting at @@x@@ and going to @@x_0@@, then we can "pull out" @@C@@ from
 !["Rebasing" a loop](/assets/2020/04/27/rebasing_loop.svg)
 We might formally write down this function between @@\gamma_0@@ and our new loop
 @@\gamma@@ (though its somewhat messy)
-%% h(r,t) = \begin{cases} 
+%% h(r,t) = \begin{cases}
     C\left( 3\left(r - \frac{t}{3}\right) + 1 \right) & r \leq \frac{t}{3} \nl
     C\left( -3\left(r - \left(1 - \frac{t}{3}\right)\right) + 1 \right) & r \geq 1 - \frac{t}{3} \nl
     \gamma_0\left( \frac{1}{1-\frac{2t}{3}}\left(r - \frac{t}{3}\right) \right) & \text{otherwise}

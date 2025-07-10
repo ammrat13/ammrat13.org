@@ -1,12 +1,12 @@
 ---
 title: "NSA Codebreaker 2020: Proof of Life"
-libs: [mathjax]
+libs: ["mathjax"]
+libs_config:
+    mathjax:
+        declarations:
+          - name: \nl
+            value: \\
 ---
-
-<div class="mathjaxDeclarations">
-    @@\newcommand{\nl}{\\}@@
-</div>
-
 
 *This post is lifted from a letter I wrote to Mr. Todd Mateer, the designer of
 Task 6 for NSA Codebreaker 2020. I was one of the first to solve it, and he
