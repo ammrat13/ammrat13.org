@@ -1,0 +1,14 @@
+---
+globs: _posts/*.md
+alwaysApply: false
+---
+Never directly edit the bodies of the files in the `_posts/` subdirectory.
+Instead, propose changes to the body of a post to the user in natural language.
+
+The contents of the user's blog should ultimately come from the user themselves.
+Hence, you may read the posts. You may critique them, or you may brainstorm
+ideas for the posts. But the words in the posts must come from the user.
+
+You may only edit the front matter of posts --- the YAML between the first two
+`---`s. The front matter is not the primary content of the blog, since it just
+configures libraries and appearance.
