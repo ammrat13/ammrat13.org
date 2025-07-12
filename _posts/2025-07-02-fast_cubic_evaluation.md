@@ -201,7 +201,7 @@ they leave performance on the table though. Specifically, note that all the
 algorithms given above take the "raw" coefficients @@c_3@@, ..., @@c_0@@ as
 input. But, Wikipedia's page on [Polynomial Evaluation][5] points out that
 pre-processing these coefficients can decrease the number of multipliers and
-adders required. [Knuth's Algorithm][6] provides a concrete way to do that.
+adders required. Knuth's Algorithm[^1] provides a concrete way to do that.
 
 Knuth's Algorithm points out that, by applying polynomial long-division, we can
 write
@@ -310,11 +310,17 @@ be better. Either way, it was some work to find these algorithms, so hopefully
 this post can save someone else from doing redoing it.
 
 Another question that remains is whether Knuth's Algorithm is "optimal".
-According to [CS 497][7] at UIUC ([mirrored][8]), it is known that Knuth's
-Algorithm uses the lowest possible number of multiplications and additions
+According to [CS 497][8][^2] at UIUC, it is known that Knuth's Algorithm uses
+the lowest possible number of multiplications and additions
 (or&nbsp;subtractions). But, it does not show that it achieves the best possible
 critical path. As shown by Estrin's Scheme in MINOTAUR, it may be better to
 optimize that instead of total area.
+
+[^1]: There are multiple sources for Knuth's Algorithm. It seems [this paper][6]
+    introduced it, but Sec. 2 of [this one][7] has a better exposition of it in
+    my opinion.
+
+[^2]: [Original][9]
 
 [1]: https://priyanka-raina.github.io/ "Priyanka Raina: Assistant Professor, Stanford University"
 [2]: https://doi.org/10.1109/VLSITechnologyandCir46783.2024.10631515 "MINOTAUR: An Edge Transformer Inference and Training Accelerator with 12 MBytes On-Chip Resistive RAM and Fine-Grained Spatiotemporal Power Gating"
@@ -322,5 +328,6 @@ optimize that instead of total area.
 [4]: https://doi.org/10.1145/1460361.1460365 "Organization of computer systems: the fixed plus variable structure computer"
 [5]: https://en.wikipedia.org/w/index.php?title=Polynomial_evaluation&oldid=1296426370#Evaluation_with_preprocessing "Polynomial evaluation § Evaluation with preprocessing"
 [6]: https://doi.org/10.1145/355580.369074 "Evaluation of polynomials by computer"
-[7]: https://jeffe.cs.illinois.edu/teaching/497/08-polynomials.pdf "CS 497: Concrete Models of Computation - Spring 2003 - Evaluating Polynomials (March 10)"
+[7]: https://doi.org/10.1016/S0167-8191(97)00096-3 "Data parallel evaluation of univariate polynomials by the Knuth-Eve algorithm"
 [8]: /assets/2025/07/02/polynomials.pdf "CS 497: Concrete Models of Computation - Spring 2003 - Evaluating Polynomials (March 10)"
+[9]: https://jeffe.cs.illinois.edu/teaching/497/08-polynomials.pdf "CS 497: Concrete Models of Computation - Spring 2003 - Evaluating Polynomials (March 10)"
