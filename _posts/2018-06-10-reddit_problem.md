@@ -16,14 +16,14 @@ but my proof seems wrong to me. For instance, I prove an integral converges by
 bounding it between two values, which I can't immediately say is true. I'm not
 proud of this work, but I thought I'd put it here for completeness._
 
-### The Problem
+## The Problem
 Reddit user `u/Poliorcetyks` posed the following question on `r/learnmath` in
 his post titled *Integrals with parameter, problem proving continuity*. Given a
 function
 %% f(x) = \int_0^1 \frac{\ln\left(\frac{1}{t}\right)^x}{t+1}\,dt, %%
 find the domain of @@f@@ and show that it is continuous on its domain.
 
-### Domain
+## Domain
 We begin by bounding @@f@@ between two other functions. Note that for all @@0
 \leq t \leq 1@@ that
 %% \frac{1}{2} \leq \frac{1}{t+1} \leq 1 %%
@@ -108,7 +108,7 @@ equal to @@-1@@ are in the domain of @@\Pi@@, and are thus not in the domain of
 In summary, we conclude that the domain of @@\Pi@@, and thus of @@f@@, is the
 set of all real numbers strictly greater than @@-1@@.
 
-### Continuity
+## Continuity
 To show that @@f@@ is continuous on its domain, we must show that @@\lim_{h \to
 0} f(x+h) = f(x)@@. To show that, we first note two facts. First, that
 %% f(x) = \lim_{a \to 0^+} \int_a^{1-a} \frac{\ln\left(\frac{1}{t}\right)^x}{t+1}\,dt, %%

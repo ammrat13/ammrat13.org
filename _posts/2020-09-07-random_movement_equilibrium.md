@@ -163,5 +163,5 @@ instance, you might notice that the Markov chain seems to overestimate the
 number of people around the edges. Why is that? I invite you all to take a look
 at the code and see what you can find.
 
-### Resources
+## Resources
 * [Code for this post](https://github.com/ammrat13/ammrat13.github.io/tree/main/assets/2020/09/07/simulation)

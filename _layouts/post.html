@@ -1,7 +1,7 @@
 ---
 layout: base
 stylesheet: post
-libs: [postsel]
+libs: [postsel, fa]
 ---
 
 {% comment %}
@@ -80,6 +80,9 @@ libs: [postsel]
 {% assign startIdx = startIdx | at_most: startIdxMax | at_least: 0 %}
 
 <p>
-    <h2>Related Posts</h2>
+    <h1>
+        <a href="/feed.xml" aria-label="RSS Feed" class="text-body rssLink"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
+        Related Posts
+    </h1>
 </p>
 {% include post_select.html start=startIdx num=numSel skipId=page.id %}

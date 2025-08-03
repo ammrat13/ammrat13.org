@@ -46,9 +46,9 @@ Redundancy Check (CRC). It is guaranteed to find a solution, and it does so much
 faster than the straightforward but exponential method.
 
 
-#### Introduction
+## Introduction
 
-##### How CRCs Work
+### How CRCs Work
 
 First, it's necessary to understand some of the math underlying CRCs.
 Ultimately, the goal of any checksum is to take in some data and derive from it
@@ -111,7 +111,7 @@ to the message. In general, if the table method is seeded with @@p@@, it XORs
 that with the first 32 bits of the input, or it equivalently prepends @@p \cdot
 x^{-32}@@.
 
-##### The Choice of π
+### The Choice of π
 
 It's worth noting some properties of CRC-32's choice of @@\pi@@. That polynomial
 is *irreducible* over @@\FF_2@@, meaning it can't be factored any further
@@ -177,7 +177,7 @@ This is not the only proof of this theorem. Another, also from
 field would have zero divisors otherwise.
 
 
-#### Approach
+## Approach
 
 With all the introductory material out of the way, we can start tackling the
 actual problem. As a reminder, we want to find a string that starts with a
@@ -223,14 +223,14 @@ This system can be easily solved, though not necessarily uniquely, as long as
 @@\matr{V}@@'s columns span @@\FF_{2^{32}}@@.
 
 
-#### Failure Resistance
+## Failure Resistance
 
 So when does that fail? Clearly, when @@\ell@@ is too small, there aren't enough
 vectors for a baisis and thus too few for a spanning set. The least you can
 possibly get away with is @@\ell = \dim\FF_{2^{32}} = 32@@. In some cases,
 that's also sufficient.
 
-##### On "2<sup>*w*</sup>-Periodic" Bases
+### On "2<sup>*w*</sup>-Periodic" Bases
 
 Specifically, when the attacker can choose to substitute individual words
 independently of each other, assuming a word's length is a power of two @@2^w@@,
@@ -269,7 +269,7 @@ Apply the above theorem @@k@@ times. □
 The result we set out to prove is this corollary with @@p=2@@, @@k=w@@, and
 @@b_i = x^i@@.
 
-##### On *n* Consecutive Powers of Primitive Elements
+### On *n* Consecutive Powers of Primitive Elements
 
 The result in the previous section was agnostic to our choice of @@b_i@@.
 However, our basis is usually quite "nice". For example, in the last section, we
@@ -322,7 +322,7 @@ above theorem and the lemma before it. As for any @@n@@ consecutive powers, with
 multiplication with @@g^d@@. □
 
 
-#### Future Work
+## Future Work
 
 Characterizing powers of two and consecutive powers is relatively easy. However,
 real-world situations might not afford this structure. Attackers might only be
@@ -349,7 +349,7 @@ it's clearly very loose. Intuitively, we'd expect it to be close to
 tighter bound on the number of bytes needed.
 
 
-#### Worked Example
+## Worked Example
 
 Suppose I want to find a string that starts with `DC`, only contains the letters
 `G` and `T` after that, and whose CRC-32 is the same as the string `the`. I
@@ -406,12 +406,12 @@ which corresponds to the message `DCGGTTGTTTTTGTTTTGTGTTTTTTTTGGGTTG`. Remeber
 that @@\vect{\alpha}[0]@@ corresponds to the last character of the string.
 
 
-#### Resources
+## Resources
 
 * [Code implementing this solution][10]
 
 
-#### Appendix: Previous Results
+## Appendix: Previous Results
 
 This section lists facts I used to prove my main results.
 
