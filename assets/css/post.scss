@@ -87,3 +87,8 @@ blockquote :last-child {
         margin-bottom: 0;
     }
 }
+
+/* Copy from `index.scss` */
+.rssLink:hover {
+    opacity: .7;
+}

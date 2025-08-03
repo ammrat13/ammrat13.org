@@ -563,7 +563,7 @@ flag{wh0_sa1d_e11ipt1c_curv3z_r_s3cur3??}
 
 ---
 
-### Resources
+## Resources
 
 This post may or may not have helped you understand Smart's attack. Ultimately,
 there's no substitute for practice --- for struggling through the material
