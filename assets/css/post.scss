@@ -64,6 +64,25 @@ blockquote :last-child {
 }
 
 
+/* End-of-proof marker styling */
+/* Include `end-of-proof.html` to use it */
+.end-of-proof {
+    float: right;
+    margin-left: 1em;
+
+    /* Have some space if the end-of-proof marker goes to the next line */
+    /* Should be less than or equal to the margin-bottom of the paragraph */
+    margin-bottom: 0.25rem;
+}
+
+/*
+    If we don't do this, the end-of-proof marker will float over the next
+    paragraph
+*/
+p {
+    clear: both;
+}
+
 #postContent {
     margin-bottom: 2rem;
 }
