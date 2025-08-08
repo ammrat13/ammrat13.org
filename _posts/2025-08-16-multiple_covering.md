@@ -61,11 +61,11 @@ required result in that case. I also like the proof given by
 [Alexandrian][5],[^1] since it uses complex analysis rather than topology.
 
 Regardless, I think another way to state my observation is: the set
-@@\Conf{\CC}{n}@@[^2] [covers][8] itself multiple times. In fact, it
-@@n!@@-covers itself, since every permutation of the roots maps to the same
-sequence of coefficients. I'm not entirely sure why, but this was surprising to
-me. In the context of sets, there are things like [Hilbert's Hotel][9] and
-[Banach–Tarski][10]. The latter is more relevant here, since (one formulation
+@@\CC^n@@ [covers][7] itself multiple times.[^2] In fact, it @@n!@@-covers
+itself, since every permutation of the roots maps to the same sequence of
+coefficients. I'm not entirely sure why, but this was surprising to me. In the
+context of sets, there are things like [Hilbert's Hotel][8] and
+[Banach–Tarski][9]. The latter is more relevant here, since (one formulation
 of) it shows that @@S^2@@ can "map over" itself twice. Neither of these examples
 use continuous functions though, and I thought enforcing continuity would
 prevent this from happening. Obviously, not the case.
@@ -73,7 +73,8 @@ prevent this from happening. Obviously, not the case.
 This isn't even the simplest example of multiple-covering I can think of. The
 circle @@S^1 \cong \RR / 2\pi\ZZ@@ covers itself any number of times. For any
 positive integer @@k@@, simply do @@t \mapsto k \cdot t@@. In a similar vein,
-@@\CC \setminus \\{0\\}@@ @@k@@-covers itself via the map @@z \mapsto z^k@@.
+the punctured complex plane @@\CC \setminus \\{0\\}@@ @@k@@-covers itself via
+the map @@z \mapsto z^k@@.
 
 ---
 
@@ -88,8 +89,8 @@ I make this definition by analogy to covering. It drops the requirement that
 @@f@@ locally be a homeomorphism, meaning it doesn't have to have a locally
 continuous inverse.
 
-At first, I thought it was impossible to multiple-hit @@\mathbb{R}@@ (from
-@@\mathbb{R}@@ itself). Polynomials have been on my mind recently, and indeed it
+At first, I thought it was impossible to multiple-hit @@\mathbb{R}@@ from
+@@\mathbb{R}@@ itself. Polynomials have been on my mind recently, and indeed it
 is impossible for polynomials.
 
 > *Observation:* For any polynomial @@p : \RR \to \RR@@, there is some infinite
@@ -100,7 +101,7 @@ First note that @@p@@ will eventually become monotonic as @@x \to \pm \infty@@.
 So let @@p@@ be monotonic on @@L := (-\infty, x_\min)@@ and on @@R := (x_\max,
 \infty)@@. The polynomial @@p@@ need not have the same "tonicity" on @@L@@ and
 @@R@@; it could be monotonically increasing on one and monotonically decreasing
-on the other. Regardless, the [extreme value theorem][11] gives that, on the
+on the other. Regardless, the [extreme value theorem][10] gives that, on the
 interval @@M := [x_\min, x_\max]@@, @@p@@ attains a minimum and maximum
 @@y_\min@@ and @@y_\max@@ respectively.
 
@@ -137,7 +138,7 @@ chain doesn't have to alternate. Consider @@\chn{x^2}{0} = [+, +]@@.
 This notion is well-defined. No subinterval can contain an @@x@@ where @@f(x) =
 y@@. If one does, we missed a solution. Furthermore, no subinterval can contain
 @@x_a, x_b@@ such that @@f(x_a) < y@@ and @@f(x_b) > y@@ or vice versa. If one
-does, then the [intermediate value theorem][12] can find a solution we missed.
+does, then the [intermediate value theorem][11] can find a solution we missed.
 
 > *Definition:* If @@c@@ is a sign chain, I define the *sign* of that sign
 > chain, which I denote @@\sgn{c}@@, as even (@@+1@@) if consecutive elements of
@@ -170,7 +171,7 @@ x_k]@@. Note that, @@y \geq y_\min@@ since @@y = f(x_1)@@ and @@y = f(x_k)@@ by
 definition. No matter where @@x@@ is located, we have that @@f(x) \geq y_\min@@,
 so @@f@@ cannot be surjective. {% include end_of_proof.html %}
 
-> *Theorem:* If @@f@@ @@k@@-hits @@\RR@@, then @@k@@ is odd.
+> *Theorem:* If @@f : \RR \to \RR@@ @@k@@-hits, then @@k@@ is odd.
 
 Start by picking any @@y@@. Let @@x_1, \cdots, x_k@@ be the solutions to @@f(x)
 = y@@, and let @@c = \chn{f}{y}@@. Now we'll consider offsetting @@y@@ by a
@@ -187,10 +188,9 @@ maximum to @@f(x_{i+1})@@.
 
 Now for the "exterior" subintervals. Due to the previous lemma, exactly one of
 those two subintervals of @@c@@ --- either @@(-\infty, x_1)@@ or @@(x_k,
-\infty)@@ --- can be @@+@@ and thus have @@f(x) > y@@. Without loss of
-generality, let's say its the left one. This subinterval gives at least one
-solution to @@f(x) = y + \epsilon@@. Again, choose any @@\epsilon@@ small enough
-that
+\infty)@@ --- is @@+@@ and thus has @@f(x) > y@@. Without loss of generality,
+let's say its the left one. This subinterval gives at least one solution to
+@@f(x) = y + \epsilon@@. Again, choose any @@\epsilon@@ small enough that
 
 %% f(x_1) = y < y + \epsilon < \sup_{x \in (-\infty, x_1)} f(x). %%
 
@@ -250,15 +250,15 @@ T(x) = \begin{cases}
 \end{cases},
 %%
 
-@@\\{x\\} = x - \lfloor x \rfloor@@ is the [fractional part][13] of the real
+@@\\{x\\} = x - \lfloor x \rfloor@@ is the [fractional part][12] of the real
 number @@x@@, and @@H_1@@ happens to be @@3@@. The function @@T@@ is a [triangle
-wave][14] starting at zero with a period of one and spanning @@[0,
+wave][13] starting at zero with a period of one and spanning @@[0,
 \frac{1}{2}]@@. This function seems to @@3@@-hit @@\RR@@, as shown in the plot
 below. Sweeping up the @@y@@-axis, each "trough" creates a new solution which
 then splits into two. These two solutions go to the two adjacent "peaks", where
-they merge with another solution, then annihilate. The scaling factor @@H_1@@
-times it so that a solution pair is annihilated precisely when a new one is
-created, so overall the number of solutions always remains the same.
+they each merge with another solution, then annihilate. The scaling factor
+@@H_1@@ times it so that a solution pair is annihilated precisely when a new one
+is created, so overall the number of solutions always remains the same.
 
 In general, it seems this framework can be used to create functions that @@(2t +
 1)@@-hit @@\RR@@, for all positive integers @@t@@. Because of the theorem above,
@@ -282,8 +282,8 @@ I think this is fundamental:
 > *Conjecture:* No simply connected topological space admits a (non-trivial)
 > multiple-covering.
 
-This statement is actually true; see [this][15] StackExchange thread and
-[this][16] blog post. I just don't know the machinery to prove it, so I mark it
+This statement is actually true; see [this][14] StackExchange thread and
+[this][15] blog post. I just don't know the machinery to prove it, so I mark it
 as a conjecture.
 
 If we require the covering space @@p : \tilde{X} \to X@@ to be path-connected, I
@@ -306,10 +306,24 @@ contradiction from here, or at the very least to add more conditions to
 At the very least, this conjecture is consistent with the datapoints we've
 collected so far. The circle @@S^1@@ and the nonzero complex numbers @@\CC
 \setminus \\{0\\}@@ both can be multiple-covered --- by themselves in fact, and
-are both not simply connected. Also:
+are both not simply connected. You may object, saying that the map that started
+this whole adventure @@\mathcal{V} : \CC^n \to \CC^n@@ is a counterexample.
+Unfortunately, I lied. The Vi&egrave;te map fails to be a covering space since,
+even though it is locally invertible, it is not uniquely locally invertible. If
+I have @@\mathcal{V}(\mathbf{c}) = \mathbf{r}@@, and I make a small adjustment
+to get @@\mathbf{r}^\prime@@, I may have multiple choices for
+@@\mathbf{c}^\prime@@. As an example, consider @@\mathbf{r} = x^2@@ and
+@@\mathbf{c} = (x-0)\cdot(x-0)@@. If I perturb @@\mathbf{r}^\prime = x^2 -
+\epsilon^2@@, then I can choose between @@\mathbf{c}^\prime = (x + \epsilon)
+\cdot (x - \epsilon)@@ or @@(x - \epsilon) \cdot (x + \epsilon)@@. Order matters
+here since we're viewing these as vectors.
 
-> *Lemma:* The space @@\Conf{\CC}{n}@@ is not simply connected (assuming @@n
-> \geq 2@@).
+We can restrict @@\mathcal{V}@@ by forcing its inputs to have distinct elements.
+In that case, it would map from the [configuration space][16] @@\Conf{\CC}{n}@@
+to some subset of @@\CC^n@@. It wouldn't map to the whole space though, so it
+wouldn't constitute a multiple-cover. Still,
+
+> *Theorem:* Assuming @@n \geq 2@@, @@\Conf{\CC}{n}@@ is not simply connected.
 
 Intuitively, we're starting with something that looks like a real vector space
 of dimension @@2n@@ and removing a finite number of subspaces of dimension @@2n
@@ -323,7 +337,9 @@ Formally, I'll just show that there exist non-contractible loops in
 
 %% \gamma(t) = \begin{pmatrix} e^{2\pi i \cdot t} & -e^{2\pi i \cdot t} & z_3 & \cdots & z_n \end{pmatrix}^\intercal %%
 
-is contractible to a point.[^8] Now look at the function
+is contractible to a point. It doesn't matter what the higher components @@z_3,
+\cdots, z_n@@ are exactly, as long as they are distinct and don't lie on the
+unit circle. Now look at the function
 
 %% f(\mathbf{z}) = z_1 - z_2 %%
 
@@ -338,6 +354,13 @@ indeed, a small adjustment to the input loop gives a small change to the output
 loop. But it's known that continuously contracting a loop encircling the origin
 down to a point is impossible. {% include end_of_proof.html %}
 
+> *Corollary:* The image @@\mathcal{V}(\Conf{\CC}{n})@@ is not simply connected.
+
+From above, consider @@\mathcal{V} \circ \gamma@@. By assumption, the resulting
+loop is contractible to a point, so all of the preimages of that loop can also
+be contracted; this comes from the homotopy lifting property. But the argument
+above shows that can't happen in this case. {% include end_of_proof.html %}
+
 ---
 
 I think I'm gonna end things off here. This was an interesting rabbit hole to
@@ -349,11 +372,14 @@ future.
 
 [^1]: [Original][6]
 
-[^2]: Notation taken from [Wikipedia: Configuration space (mathematics)][7]
+[^2]: As written, this statement is actually false. I'll get to that later, but
+    just go with it for now.
 
 [^3]: Actually, I started with the even weaker condition that @@f(x) = y@@ has
     more than one solution for every @@y@@. I found that @@f(x) = x \cdot
-    \sin(x)@@ satisfies that criteria.
+    \sin(x)@@ satisfies that criteria. But it didn't seem in the spirit of what
+    I was looking for, since some values of @@y@@ get "more" solutions than
+    others.
 
 [^4]: I think this was covered in Algebra II, which I took in 9th grade. Of
     course, these exact definitions and notations weren't given --- just the
@@ -369,22 +395,20 @@ future.
 
 [^7]: I don't show that @@\Conf{\CC}{n}@@ is in fact path connected.
 
-[^8]: It doesn't matter what the higher components @@z_3, \cdots, z_n@@ are
-    exactly, as long as they are distinct and don't lie on the unit circle.
-
 [1]: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra> "Wikipedia: Fundamental theorem of algebra"
 [2]: <https://en.wikipedia.org/wiki/Taylor_series> "Wikipedia: Taylor series"
 [3]: <https://math.stackexchange.com/q/63196> "Mathematics StackExchange: Continuity of the roots of a polynomial in terms of its coefficients"
 [4]: <https://en.wikipedia.org/wiki/Geometrical_properties_of_polynomial_roots#Continuous_dependence_on_coefficients> "Wikipedia: Geometrical properties of polynomial roots"
 [5]: </assets/2025/08/16/polyroots.pdf> "On continuous dependence of roots of polynomials on coefficients"
 [6]: <https://aalexan3.math.ncsu.edu/articles/polyroots.pdf> "On continuous dependence of roots of polynomials on coefficients"
-[7]: <https://en.wikipedia.org/wiki/Configuration_space_(mathematics)> "Wikipedia: Configuration space (mathematics)"
-[8]: <https://en.wikipedia.org/wiki/Covering_space> "Wikipedia: Covering space"
-[9]: <https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel> "Wikipedia: Hilbert's paradox of the Grand Hotel"
-[10]: <https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox> "Wikipedia: Banach–Tarski paradox"
-[11]: <https://en.wikipedia.org/wiki/Extreme_value_theorem> "Wikipedia: Extreme value theorem"
-[12]: <https://en.wikipedia.org/wiki/Intermediate_value_theorem> "Wikipedia: Intermediate value theorem"
-[13]: <https://en.wikipedia.org/wiki/Fractional_part> "Wikipedia: Fractional part"
-[14]: <https://en.wikipedia.org/wiki/Triangle_wave> "Wikipedia: Triangle wave"
-[15]: <https://math.stackexchange.com/a/2846730> "If Y is simply connected, then it doesn't admit covering maps that aren't homeomorphisms"
-[16]: <https://www.partiallyordered.com/posts/covering-spaces> "Covering spaces"
+[7]: <https://en.wikipedia.org/wiki/Covering_space> "Wikipedia: Covering space"
+[8]: <https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel> "Wikipedia: Hilbert's paradox of the Grand Hotel"
+[9]: <https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox> "Wikipedia: Banach–Tarski paradox"
+[10]: <https://en.wikipedia.org/wiki/Extreme_value_theorem> "Wikipedia: Extreme value theorem"
+[11]: <https://en.wikipedia.org/wiki/Intermediate_value_theorem> "Wikipedia: Intermediate value theorem"
+[12]: <https://en.wikipedia.org/wiki/Fractional_part> "Wikipedia: Fractional part"
+[13]: <https://en.wikipedia.org/wiki/Triangle_wave> "Wikipedia: Triangle wave"
+[14]: <https://math.stackexchange.com/a/2846730> "If Y is simply connected, then it doesn't admit covering maps that aren't homeomorphisms"
+[15]: <https://www.partiallyordered.com/posts/covering-spaces> "Covering spaces"
+[16]: <https://en.wikipedia.org/wiki/Configuration_space_(mathematics)> "Wikipedia: Configuration space (mathematics)"
+[17]: <https://algebraic-topology.readthedocs.io/en/latest/ch1/sec3/lifting-properties.html> "Agebraic topology: Lifting properties"
