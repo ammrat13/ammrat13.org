@@ -51,6 +51,13 @@ perturbation to @@\mathbf{r}@@ called @@\mathbf{r}^\prime@@ such that
 just intuited it by [Taylor][2]-expanding polynomial in question about each
 root.
 
+<figure>
+<img src="/assets/2025/08/16/viete_example.svg"/>
+<figcaption>
+Example of the Vi&egrave;te map on the roots of the polynomial @@x^2 + 1@@.
+</figcaption>
+</figure>
+
 Apparently, this map has a name; @@\mathcal{V}@@ is the Vi&egrave;te map. That
 name comes from [this][3] StackExchange thread. It mainly looks at showing the
 statement from the last paragraph --- that the roots of a polynomial locally
@@ -75,6 +82,14 @@ circle @@S^1 \cong \RR / 2\pi\ZZ@@ covers itself any number of times. For any
 positive integer @@k@@, simply do @@t \mapsto k \cdot t@@. In a similar vein,
 the punctured complex plane @@\CC \setminus \\{0\\}@@ @@k@@-covers itself via
 the map @@z \mapsto z^k@@.
+
+<figure>
+<img src="/assets/2025/08/16/zsquared.png" width="50%"/>
+<figcaption>
+A plot of the function @@z \mapsto z^2@@. Note that encircling the origin gives
+every hue twice.
+</figcaption>
+</figure>
 
 ---
 
