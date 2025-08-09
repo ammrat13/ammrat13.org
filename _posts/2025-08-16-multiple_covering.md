@@ -87,7 +87,8 @@ the map @@z \mapsto z^k@@.
 <img src="/assets/2025/08/16/zsquared.png" width="50%"/>
 <figcaption>
 A plot of the function @@z \mapsto z^2@@. Note that encircling the origin gives
-every hue twice.
+every hue twice. Make with Samuel J. Li's
+<a href="https://samuelj.li/complex-function-plotter" title="Samuel J. Li: Complex function plotter"> Complex function plotter</a>.
 </figcaption>
 </figure>
 
@@ -150,6 +151,13 @@ So for example, consider the function @@x^3 - x@@. Its sign chain at @@y = 0@@
 is @@[-, +, -, +]@@, while at @@y = 1@@ it's @@[-, +]@@. Note that the sign
 chain doesn't have to alternate. Consider @@\chn{x^2}{0} = [+, +]@@.
 
+<figure>
+<img src="/assets/2025/08/16/sign_chain_example.svg"/>
+<figcaption>
+The sign chains of @@y = x^3 - x@@ at @@y = 0@@ and @@y = 1@@.
+</figcaption>
+</figure>
+
 This notion is well-defined. No subinterval can contain an @@x@@ where @@f(x) =
 y@@. If one does, we missed a solution. Furthermore, no subinterval can contain
 @@x_a, x_b@@ such that @@f(x_a) < y@@ and @@f(x_b) > y@@ or vice versa. If one
@@ -201,6 +209,13 @@ y + \epsilon@@. To see this, choose @@\epsilon@@ small enough that
 the way up to the maximum from @@f(x_i)@@, and one on the way back down from the
 maximum to @@f(x_{i+1})@@.
 
+<figure>
+<img src="/assets/2025/08/16/interior.svg"/>
+<figcaption>
+The new solutions after nudging @@y@@ on an interior interval.
+</figcaption>
+</figure>
+
 Now for the "exterior" subintervals. Due to the previous lemma, exactly one of
 those two subintervals of @@c@@ --- either @@(-\infty, x_1)@@ or @@(x_k,
 \infty)@@ --- is @@+@@ and thus has @@f(x) > y@@. Without loss of generality,
@@ -212,6 +227,13 @@ let's say its the left one. This subinterval gives at least one solution to
 [^6] If we do that, we have @@f(x) > y + \epsilon@@ for some @@x \in (-\infty,
 x_1)@@, at which point the intermediate value theorem gives a point with
 equality.
+
+<figure>
+<img src="/assets/2025/08/16/exterior.svg"/>
+<figcaption>
+The new solutions after nudging @@y@@ on an exterior interval.
+</figcaption>
+</figure>
 
 In the end, if @@n_+@@ is the number of @@+@@ intervals in @@c@@, then @@f(x) =
 y + \epsilon@@ has at least @@2n_+ - 1@@ solutions. The @@n_+ - 1@@ interior
@@ -274,6 +296,14 @@ then splits into two. These two solutions go to the two adjacent "peaks", where
 they each merge with another solution, then annihilate. The scaling factor
 @@H_1@@ times it so that a solution pair is annihilated precisely when a new one
 is created, so overall the number of solutions always remains the same.
+
+<figure>
+<img src="/assets/2025/08/16/h1_plot/h1_plot.gif" width="75%"/>
+<figcaption>
+Plot of @@\mathcal{H}_1@@, along with the solutions as @@y@@ is swept from
+@@-2@@ to @@4@@.
+</figcaption>
+</figure>
 
 In general, it seems this framework can be used to create functions that @@(2t +
 1)@@-hit @@\RR@@, for all positive integers @@t@@. Because of the theorem above,
@@ -408,7 +438,7 @@ future.
 
 [^6]: Here, the suprenum is taken to be @@\infty@@ if it doesn't exist.
 
-[^7]: I don't show that @@\Conf{\CC}{n}@@ is in fact path connected.
+[^7]: I don't formally show that @@\Conf{\CC}{n}@@ is in fact path connected.
 
 [1]: <https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra> "Wikipedia: Fundamental theorem of algebra"
 [2]: <https://en.wikipedia.org/wiki/Taylor_series> "Wikipedia: Taylor series"
@@ -427,3 +457,4 @@ future.
 [15]: <https://www.partiallyordered.com/posts/covering-spaces> "Covering spaces"
 [16]: <https://en.wikipedia.org/wiki/Configuration_space_(mathematics)> "Wikipedia: Configuration space (mathematics)"
 [17]: <https://algebraic-topology.readthedocs.io/en/latest/ch1/sec3/lifting-properties.html> "Agebraic topology: Lifting properties"
+[18]: <https://samuelj.li/complex-function-plotter> "Samuel J. Li: Complex function plotter"
