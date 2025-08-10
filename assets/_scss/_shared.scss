@@ -35,13 +35,20 @@ a:hover {
 /* Have some parameters for calculating the width of objects */
 $pageObjWidth: 50vw;
 $pageObjMinWidth: 23rem;
+$pageObjMaxWidth: 10in;
 %page-obj {
     /* Center on the page with auto margins */
-    /* Be sure to set width and min-width when inheriting */
     margin: auto;
 
     /* Also add some space to the bottom */
     margin-bottom: 2rem;
+
+    /* By default, page objects take up as much space as possible */
+    /* (Of course, we constrain the width to have large margins on the sides) */
+    /* If you need to take less, change these after inheriting */
+    width: $pageObjWidth;
+    min-width: $pageObjMinWidth;
+    max-width: $pageObjMaxWidth;
 }
 
 /*
@@ -50,13 +57,9 @@ $pageObjMinWidth: 23rem;
 */
 #topLevelNav {
     @extend %page-obj;
-    width: $pageObjWidth;
-    min-width: $pageObjMinWidth;
 }
 #footer {
     @extend %page-obj;
-    width: $pageObjWidth;
-    min-width: $pageObjMinWidth;
 }
 
 /* By contrast, the content is inset somewhat */
@@ -65,6 +68,7 @@ $contentInset: 2rem;
     @extend %page-obj;
     width: calc(#{$pageObjWidth} - #{$contentInset});
     min-width: calc(#{$pageObjMinWidth} - #{$contentInset});
+    max-width: calc(#{$pageObjMaxWidth} - #{$contentInset});
 }
 
 
