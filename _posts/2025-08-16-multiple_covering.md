@@ -102,7 +102,7 @@ for any positive number @@k@@. At first, I considered a weaker condition:[^3]
 > @@f(x) = y@@. If @@k \geq 2@@, then I'll say that @@f@@ multiple-hits @@Y@@.
 
 I make this definition by analogy to covering. It drops the requirement that
-@@f@@ locally be a homeomorphism, meaning it doesn't have to have a locally
+@@f@@ locally be a homeomorphism, meaning it also doesn't have to have a locally
 continuous inverse.
 
 At first, I thought it was impossible to multiple-hit @@\mathbb{R}@@ from
@@ -144,8 +144,8 @@ functions.
 > *Definition:* Let @@f@@ by a continuous function such that @@f(x) = y@@ has
 > finitely many solutions @@x_1, \cdots, x_k@@. I define the *sign chain* of
 > @@f@@ at @@y@@, which I denote @@\chn{f}{y}@@, as the list of length @@k+1@@
-> containing whether @@f@@ is greater than or less than @@y@@ on the
-> subintervals @@(-\infty, x_1)@@, @@(x_1, x_2)@@, ..., @@(x_k, \infty)@@.
+> containing whether @@f@@ is greater than (@@+@@) or less than (@@-@@) @@y@@ on
+> the subintervals @@(-\infty, x_1)@@, @@(x_1, x_2)@@, ..., @@(x_k, \infty)@@.
 
 So for example, consider the function @@x^3 - x@@. Its sign chain at @@y = 0@@
 is @@[-, +, -, +]@@, while at @@y = 1@@ it's @@[-, +]@@. Note that the sign
@@ -359,15 +359,15 @@ and all mapped to from the interval @@[0,1]@@.
 
 At the very least, this conjecture is consistent with the datapoints we've
 collected so far. The circle @@S^1@@ and the nonzero complex numbers @@\CC
-\setminus \\{0\\}@@ both can be multiple-covered --- by themselves in fact, and
-are both not simply connected. You may object, saying that the map that started
-this whole adventure @@\mathcal{V} : \CC^n \to \CC^n@@ is a counterexample.
-Unfortunately, I lied. The Vi&egrave;te map fails to be a covering space since,
-even though it is locally invertible, it is not uniquely locally invertible. If
-I have @@\mathcal{V}(\mathbf{c}) = \mathbf{r}@@, and I make a small adjustment
-to get @@\mathbf{r}^\prime@@, I may have multiple choices for
-@@\mathbf{c}^\prime@@. As an example, consider @@\mathbf{r} = x^2@@ and
-@@\mathbf{c} = (x-0)\cdot(x-0)@@. If I perturb @@\mathbf{r}^\prime = x^2 -
+\setminus \\{0\\}@@ both can be multiple-covered --- by themselves in fact ---
+and are both not simply connected. You may object, saying that the map that
+started this whole adventure @@\mathcal{V} : \CC^n \to \CC^n@@ is a
+counterexample. Unfortunately, I lied. The Vi&egrave;te map fails to be a
+covering space since, even though it is locally invertible, it is not uniquely
+locally invertible. If I have @@\mathcal{V}(\mathbf{c}) = \mathbf{r}@@, and I
+make a small adjustment to get @@\mathbf{r}^\prime@@, I may have multiple
+choices for @@\mathbf{c}^\prime@@. As an example, consider @@\mathbf{r} = x^2@@
+and @@\mathbf{c} = (x-0)\cdot(x-0)@@. If I perturb @@\mathbf{r}^\prime = x^2 -
 \epsilon^2@@, then I can choose between @@\mathbf{c}^\prime = (x + \epsilon)
 \cdot (x - \epsilon)@@ or @@(x - \epsilon) \cdot (x + \epsilon)@@. Order matters
 here since we're viewing these as vectors.
@@ -412,9 +412,10 @@ down to a point is impossible. {% include end_of_proof.html %}
 <img src="/assets/2025/08/16/noncontractible_path.svg"/>
 <figcaption>
 An example of a path in @@\Conf{\CC}{n}@@ that can't be contracted to a point:
-two points orbiting a common center. Interestingly, if one point follows its
-path before the other, the path is contractible. Only having both points move at
-the same time causes their difference to encircle the origin.
+two points orbiting a common center, both reaching their midpoint at the same
+time. Interestingly, if one point follows its path before the other, the path
+may be contractible. Only having both points move in sync causes their
+difference to encircle the origin.
 </figcaption>
 </figure>
 
@@ -449,7 +450,7 @@ future.
     course, these exact definitions and notations weren't given --- just the
     general idea.
 
-[^5]: It turns out that @@f(x)@@ attains its maximum value on the open @@+@@
+[^5]: We have that @@f(x)@@ attains its maximum value on the open @@+@@
     subinterval @@(a, b)@@. The intermediate value theorem guarantees a maximum
     on the closed interval @@[a, b]@@. But, @@f(a), f(b) = y@@, and every point
     in the interior of the interval has @@f(x) > y@@, so the endpoints can't
