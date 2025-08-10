@@ -52,7 +52,7 @@ just intuited it by [Taylor][2]-expanding polynomial in question about each
 root.
 
 <figure>
-<img src="/assets/2025/08/16/viete_example.svg"/>
+<img src="/assets/2025/08/09/viete_example.svg"/>
 <figcaption>
 Example of the Vi&egrave;te map on the roots of the polynomial @@x^2 + 1@@.
 </figcaption>
@@ -84,7 +84,7 @@ the punctured complex plane @@\CC \setminus \\{0\\}@@ @@k@@-covers itself via
 the map @@z \mapsto z^k@@.
 
 <figure>
-<img src="/assets/2025/08/16/zsquared.png" width="50%"/>
+<img src="/assets/2025/08/09/zsquared.png" width="50%"/>
 <figcaption>
 A plot of the function @@z \mapsto z^2@@. Note that encircling the origin gives
 every hue twice. Make with Samuel J. Li's
@@ -152,7 +152,7 @@ is @@[-, +, -, +]@@, while at @@y = 1@@ it's @@[-, +]@@. Note that the sign
 chain doesn't have to alternate. Consider @@\chn{x^2}{0} = [+, +]@@.
 
 <figure>
-<img src="/assets/2025/08/16/sign_chain_example.svg"/>
+<img src="/assets/2025/08/09/sign_chain_example.svg"/>
 <figcaption>
 The sign chains of @@y = x^3 - x@@ at @@y = 0@@ and @@y = 1@@.
 </figcaption>
@@ -210,7 +210,7 @@ the way up to the maximum from @@f(x_i)@@, and one on the way back down from the
 maximum to @@f(x_{i+1})@@.
 
 <figure>
-<img src="/assets/2025/08/16/interior.svg"/>
+<img src="/assets/2025/08/09/interior.svg"/>
 <figcaption>
 The new solutions after nudging @@y@@ on an interior interval.
 </figcaption>
@@ -229,7 +229,7 @@ x_1)@@, at which point the intermediate value theorem gives a point with
 equality.
 
 <figure>
-<img src="/assets/2025/08/16/exterior.svg"/>
+<img src="/assets/2025/08/09/exterior.svg"/>
 <figcaption>
 The new solutions after nudging @@y@@ on an exterior interval.
 </figcaption>
@@ -298,7 +298,7 @@ they each merge with another solution, then annihilate. The scaling factor
 is created, so overall the number of solutions always remains the same.
 
 <figure>
-<img src="/assets/2025/08/16/h1_plot/h1_plot.gif" width="75%"/>
+<img src="/assets/2025/08/09/h1_plot/h1_plot.gif" width="75%"/>
 <figcaption>
 Plot of @@\mathcal{H}_1@@, along with the solutions as @@y@@ is swept from
 @@-2@@ to @@4@@.
@@ -349,7 +349,7 @@ contradiction from here, or at the very least to add more conditions to
 @@\tilde{X}@@ to cause a contradiction. {% include end_of_proof.html %}
 
 <figure>
-<img src="/assets/2025/08/16/path_covering.svg"/>
+<img src="/assets/2025/08/09/path_covering.svg"/>
 <figcaption>
 Diagram of the situation we have after contracting @@\gamma@@. We have a deck of
 open sets in @@\tilde{X}@@, all homeomorphic to a particular open set in @@X@@,
@@ -409,7 +409,7 @@ loop. But it's known that continuously contracting a loop encircling the origin
 down to a point is impossible. {% include end_of_proof.html %}
 
 <figure>
-<img src="/assets/2025/08/16/noncontractible_path.svg"/>
+<img src="/assets/2025/08/09/noncontractible_path.svg"/>
 <figcaption>
 An example of a path in @@\Conf{\CC}{n}@@ that can't be contracted to a point:
 two points orbiting a common center, both reaching their midpoint at the same
@@ -464,7 +464,7 @@ future.
 [2]: <https://en.wikipedia.org/wiki/Taylor_series> "Wikipedia: Taylor series"
 [3]: <https://math.stackexchange.com/q/63196> "Mathematics StackExchange: Continuity of the roots of a polynomial in terms of its coefficients"
 [4]: <https://en.wikipedia.org/wiki/Geometrical_properties_of_polynomial_roots#Continuous_dependence_on_coefficients> "Wikipedia: Geometrical properties of polynomial roots"
-[5]: </assets/2025/08/16/polyroots.pdf> "On continuous dependence of roots of polynomials on coefficients"
+[5]: </assets/2025/08/09/polyroots.pdf> "On continuous dependence of roots of polynomials on coefficients"
 [6]: <https://aalexan3.math.ncsu.edu/articles/polyroots.pdf> "On continuous dependence of roots of polynomials on coefficients"
 [7]: <https://en.wikipedia.org/wiki/Covering_space> "Wikipedia: Covering space"
 [8]: <https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel> "Wikipedia: Hilbert's paradox of the Grand Hotel"
