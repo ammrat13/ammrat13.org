@@ -333,20 +333,29 @@ as a conjecture.
 
 If we require the covering space @@p : \tilde{X} \to X@@ to be path-connected, I
 think I want to do the following. Suppose @@x \in X@@ has two preimages
-@@\tilde{x}_1@@ and @@\tilde{x}_2@@. Let @@\tilde{\gamma}@@ be a path in
+@@\tilde{x}_0@@ and @@\tilde{x}_1@@. Let @@\tilde{\gamma}@@ be a path in
 @@\tilde{X}@@ between those two points. Under @@p@@, that path maps to a loop
 @@\gamma@@ in @@X@@. But since @@X@@ is simply connected, we can contract
 @@\gamma@@ to a point. I want to continuously deform @@\tilde{\gamma}@@ so that
 it always maps to @@\gamma@@ throughout the contraction.
 
-In the end, @@\tilde{\gamma}@@ would be a path from @@\tilde{x}_1@@ to
-@@\tilde{x}_2@@, while @@\gamma@@ is constant at @@x@@. We'd get an entire
+In the end, @@\tilde{\gamma}@@ would be a path from @@\tilde{x}_0@@ to
+@@\tilde{x}_1@@, while @@\gamma@@ is constant at @@x@@. We'd get an entire
 continuous path of points mapping to the same point. And because @@p@@ is a
 covering, this would give a large family of open sets in @@\tilde{X}@@, each
 disjoint from each other, and each homeomorphic to a particular open set
 containing @@x@@. This is certainly weird. It should be possible to derive a
 contradiction from here, or at the very least to add more conditions to
 @@\tilde{X}@@ to cause a contradiction. {% include end_of_proof.html %}
+
+<figure>
+<img src="/assets/2025/08/16/path_covering.svg"/>
+<figcaption>
+Diagram of the situation we have after contracting @@\gamma@@. We have a deck of
+open sets in @@\tilde{X}@@, all homeomorphic to a particular open set in @@X@@,
+and all mapped to from the interval @@[0,1]@@.
+</figcaption>
+</figure>
 
 At the very least, this conjecture is consistent with the datapoints we've
 collected so far. The circle @@S^1@@ and the nonzero complex numbers @@\CC
@@ -398,6 +407,16 @@ loop that starts at @@2@@ and encircles the origin once counterclockwise. But if
 indeed, a small adjustment to the input loop gives a small change to the output
 loop. But it's known that continuously contracting a loop encircling the origin
 down to a point is impossible. {% include end_of_proof.html %}
+
+<figure>
+<img src="/assets/2025/08/16/noncontractible_path.svg"/>
+<figcaption>
+An example of a path in @@\Conf{\CC}{n}@@ that can't be contracted to a point:
+two points orbiting a common center. Interestingly, if one point follows its
+path before the other, the path is contractible. Only having both points move at
+the same time causes their difference to encircle the origin.
+</figcaption>
+</figure>
 
 > *Corollary:* The image @@\mathcal{V}(\Conf{\CC}{n})@@ is not simply connected.
 
