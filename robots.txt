@@ -3,6 +3,11 @@ User-agent: *
 Disallow: /assets/public.asc
 Disallow: /.well-known/openpgpkey/
 
+# The post listing should not be indexed.
+# Only the home page and each post should be.
+User-agent: *
+Disallow: /post_listing/
+
 # Disallow some bots
 # See: https://github.com/ai-robots-txt/ai.robots.txt
 User-agent: ChatGPT-User
