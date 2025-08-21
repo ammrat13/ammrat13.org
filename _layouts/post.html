@@ -16,7 +16,19 @@ libs: [postsel, fa]
 
     "headline": {{ page.title | jsonify }},
     "datePublished": "{{ page.date | date_to_xmlschema }}",
-    "keywords": {% if page.tags %}{{ page.tags | jsonify }}{% else %}[]{% endif %},
+
+    {% comment %}
+        Just like with the `meta` tag, use the explicit description if given and
+        leave it blank otherwise.
+
+        Do the same thing for the keywords, too.
+    {% endcomment %}
+    {% if page.description %}
+        "description": {{ page.description | jsonify }},
+    {% endif %}
+    {% if page.tags %}
+        "keywords": {{ page.tags | jsonify }},
+    {% endif %}
 
     "author": {
         "@type": "Person",
@@ -40,17 +52,19 @@ libs: [postsel, fa]
 {% endfor %}
 
 <main id="theMain">
-    {% comment %}
-        Have a separate paragraph for the title due to spacing.
-    {% endcomment %}
-    <p>
-        <h1>{{page.title}}</h1>
-        <em class="text-muted">{{page.date | date: "%-d %B %Y"}}</em>
-    </p>
+    <article>
+        {% comment %}
+            Have a separate paragraph for the title due to spacing.
+        {% endcomment %}
+        <p>
+            <h1>{{page.title}}</h1>
+            <em class="text-muted">{{page.date | date: "%-d %B %Y"}}</em>
+        </p>
 
-    <div id="postContent">
-            {{content}}
-    </div>
+        <div id="postContent">
+                {{content}}
+        </div>
+    </article>
 </main>
 
 <hr/>
