@@ -16,7 +16,19 @@ libs: [postsel, fa]
 
     "headline": {{ page.title | jsonify }},
     "datePublished": "{{ page.date | date_to_xmlschema }}",
-    "keywords": {% if page.tags %}{{ page.tags | jsonify }}{% else %}[]{% endif %},
+
+    {% comment %}
+        Just like with the `meta` tag, use the explicit description if given and
+        leave it blank otherwise.
+
+        Do the same thing for the keywords, too.
+    {% endcomment %}
+    {% if page.description %}
+        "description": {{ page.description | jsonify }},
+    {% endif %}
+    {% if page.tags %}
+        "keywords": {{ page.tags | jsonify }},
+    {% endif %}
 
     "author": {
         "@type": "Person",
