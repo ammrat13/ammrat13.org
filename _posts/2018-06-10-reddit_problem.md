@@ -8,13 +8,13 @@ libs_config:
             value: \\
 ---
 
-_This post used to be hosted on my [GitHub](https://github.com/ammrat13),
-but I felt it would fit better here. I was intrigued by this problem because it
-tied into what I learned in Calculus BC. Only now do I know I didn't have the
-techniques I needed to tackle this problem. I can't quite put my finger on why,
-but my proof seems wrong to me. For instance, I prove an integral converges by
-bounding it between two values, which I can't immediately say is true. I'm not
-proud of this work, but I thought I'd put it here for completeness._
+_This post used to be hosted on my GitHub, but I felt it would fit better here.
+I was intrigued by this problem because it tied into what I learned in Calculus
+BC. Only now do I know I didn't have the techniques I needed to tackle this
+problem. I can't quite put my finger on why, but my proof seems wrong to me. For
+instance, I prove an integral converges by bounding it between two values, which
+I can't immediately say is true. I'm not proud of this work, but I thought I'd
+put it here for completeness._
 
 ## The Problem
 Reddit user `u/Poliorcetyks` posed the following question on `r/learnmath` in
