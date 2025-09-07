@@ -10,11 +10,10 @@ libs_config:
             value: \blacksquare
 ---
 
-_This post used to be hosted on my [GitHub](https://github.com/ammrat13),
-but I felt it would fit better here. I wrote this when we covered sequences and
-series in Calculus BC. I was interested in these particular series since they
-weren't covered in class, and I found them to be a good opportunity to practice
-the techniques I learned._
+_This post used to be hosted on my GitHub, but I felt it would fit better here.
+I wrote this when we covered sequences and series in Calculus BC. I was
+interested in these particular series since they weren't covered in class, and I
+found them to be a good opportunity to practice the techniques I learned._
 
 Consider the infinite sum
 %%S = \sum_{k=1}^\infty \frac{k^m}{n^k}.%%
