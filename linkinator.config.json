@@ -4,8 +4,8 @@
     "skip": [
         "https://www.linkedin.com/in/ammar-ratnani",
         "https://\\w+.stackexchange.com",
-        "http://www.ecs.umass.edu/ece/koren/FaultTolerantSystems/simulator/Hamming/HammingCodes.html",
 
+        "http://www.ecs.umass.edu/ece/koren/FaultTolerantSystems/simulator/Hamming/HammingCodes.html",
         "https://jeffe.cs.illinois.edu/teaching/497/08-polynomials.pdf",
         "https://aalexan3.math.ncsu.edu/articles/polyroots.pdf"
     ]
