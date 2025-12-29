@@ -1,0 +1,28 @@
+---
+globs: _posts/*.md
+---
+
+# Non-Standard LaTeX Code
+
+In posts,
+
+* `@@` is used to delimit in-line LaTeX code, and `%%` is used to delimit block
+  formulas. This is defined in `_layouts/base.html`.
+* the user-defined `\nl` command is usually used instead of `\\` for line
+  breaks, so as to not mess up the Markdown parser
+* a backslash is placed before the `*` in commands like `\begin{align*}`
+
+Do not use this formatting in your responses. Use standard LaTeX formatting for
+those. This information is only to help you read my posts.
+
+## Example
+
+If @@n@@ is a positive integer, then
+
+%%
+\begin{align\*}
+\sum_{i=1}^n i
+&= \frac{n \cdot (n+1)}{2} \nl
+&= \frac{1}{2} n^2 + \frac{1}{2} n.
+\end{align\*}
+%%
