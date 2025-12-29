@@ -5,3 +5,6 @@ _site/
 # Ignore gem and node dependencies
 vendor/
 node_modules/
+
+# Ignore auto-generated code from SageMath
+*.sage.py
