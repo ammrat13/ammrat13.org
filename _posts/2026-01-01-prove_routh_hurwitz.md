@@ -440,8 +440,8 @@ p_i(t)@@ at least @@n-1@@ real roots. And this is also exact since the degree of
 @@p_i@@ for even @@n@@ is at most @@n-1@@.
 
 Ignoring the extra root at zero, the roots of @@p_i@@ form @@\frac{1}{2}(n-2)@@
-positive/negative root pairs, since @@p_i(z) = p_i(-z)@@.[^root_pairs] Hence, we
-can write
+positive/negative root pairs, since @@\frac{1}{z} p_i(z)@@ is
+[even][even_odd_func].[^root_pairs] Hence, we can write
 
 %%
 \begin{align\*}
@@ -593,10 +593,10 @@ algorithm to evaluate @@q@@ at @@x - s@@, giving @@p(x)@@.
 [^cauchy_example_nonphysical]: It can't since it must exit the same way it came,
         but I'm using this to demonstrate a point.
 
-[^root_pairs]: Strictly speaking, I also need to show that this symmetry is
-        preserved when we deflate @@p_i@@ by dividing out a root pair. It is,
-        since @@(z+r)(z-r) = (z^2 - r^2)@@ also has the required symmetry. But,
-        I'm just going to take this as a known fact.
+[^root_pairs]: Strictly speaking, I also need to show that this evenness is
+        preserved when we deflate @@\frac{1}{z} p_i(z)@@ by dividing out a root
+        pair. It is, since @@(z+r)(z-r) = (z^2 - r^2)@@ is even. But, I'm just
+        going to take this as a known fact.
 
 [eve_thm]: https://doi.org/10.1007/BF01386049 "Eve, J. The evaluation of polynomials. Numer. Math. 6, 17–21 (1964)."
 [knuth_algo]: https://doi.org/10.1145/355580.369074 "Donald E. Knuth. 1962. Evaluation of polynomials by computer. Commun. ACM 5, 12 (Dec. 1962), 595–599."
@@ -604,3 +604,4 @@ algorithm to evaluate @@q@@ at @@x - s@@, giving @@p(x)@@.
 [cauchy_idx]: https://en.wikipedia.org/wiki/Cauchy_index "Wikipedia: Cauchy index"
 [rational_func]: https://en.wikipedia.org/wiki/Rational_function "Wikipedia: Rational function"
 [knuth_optimal]: https://jeffe.cs.illinois.edu/teaching/497/08-polynomials.pdf "CS 497: Evaluating Polynomials"
+[even_odd_func]: https://en.wikipedia.org/wiki/Even_and_odd_functions "Wikipedia: Even and odd functions"
