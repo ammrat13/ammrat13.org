@@ -1,4 +1,4 @@
-# (Mostly) AI Generated Code
+# VIBECODE: Most of this file
 
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,7 +1,9 @@
 ---
 globs: _posts/*.md
-alwaysApply: false
 ---
+
+# Don't Touch the Posts
+
 Never directly edit the bodies of the files in the `_posts/` subdirectory.
 Instead, propose changes to the body of a post to the user in natural language.
 

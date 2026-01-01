@@ -19,6 +19,9 @@ figure img {
     display: inline-block;
     margin: 0 0 1em;
     max-width: 100%;
+
+    /* If their height is manually limited, scale keeping aspect ratio */
+    object-fit: contain;
 }
 /* Figures should align their text center */
 figure {
