@@ -6,7 +6,7 @@ PLOT_BOUND = 7
 
 def squish(z):
     """
-    Function to squish large outputs down to a managable range for plotting.
+    Function to squish large outputs down to a manageable range for plotting.
 
     Goes from ℂ → ℂ.
     """
