@@ -97,12 +97,6 @@ p {
     font-size: 0.8rem;
     color: var(--bs-secondary);
 
-    /* Reduce space between the left side of the page and the number */
-    /* Apparently, numbers go inside the padding */
-    ol {
-        padding-left: 1rem;
-    }
-
     /* Remove the spacing between footnotes */
     /* The default paragraph spacing is too much */
     p {
