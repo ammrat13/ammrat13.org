@@ -2,7 +2,7 @@
 
 This repository contains artifacts licensed under both MIT and CC-BY-4.0. The
 intent is that all these artifacts should be able to be used freely, given
-sufficient attribution. Attribution is required; it is required more-so for
+sufficient attribution. Attribution is required; it is certainly required for
 identifying information, though it must also be given for prose, images, and
 code. Either way, I cannot be held liable for damages caused by use of artifacts
 in this repository.
@@ -28,7 +28,7 @@ The text of the MIT License is given in `LICENSES/MIT.txt`. It covers all of the
   * `.github/*`
   * `.markdownlint.yaml`
   * `linkinator.config.json`
-* Auxiary repository files, including
+* Auxiliary repository files, including
   * `.gitignore` and `.gitattributes`
 * Any computer code in the `assets/` directory, such as Python or C files.
 
