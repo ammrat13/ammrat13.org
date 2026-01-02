@@ -544,7 +544,7 @@ We can apply this approach recursively to @@q@@ to get an algorithm for
 evaluating @@p(x)@@. And it's a great algorithm! Assuming we precompute @@x^2@@,
 each recursive step to reduce the degree of @@p@@ by two requires two additions
 and just one multiplication. In total, to evaluate a polynomial of degree @@n@@,
-we need @@n+o(1)@@ additions and @@\frac{1}{2}n+o(1)@@ multiplications, [which
+we need @@n+O(1)@@ additions and @@\frac{1}{2}n+O(1)@@ multiplications, [which
 is the best possible][knuth_optimal].
 
 Sadly, running this algorithm to completion requires all the roots of @@p_o@@ to
