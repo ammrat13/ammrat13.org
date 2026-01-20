@@ -1,0 +1,21 @@
+{
+    "name": "Jekyll",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "davidanson.vscode-markdownlint",
+                "medo64.render-crlf",
+                "shardulm94.trailing-spaces"
+            ]
+        }
+    },
+
+    "remoteUser": "ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    }
+}
