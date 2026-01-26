@@ -1,10 +1,7 @@
-# Data for the navbar on the site
-# Remember that the brand links to the home page - this just contains all the
-#   other links
+# Data for the navbar on the site. Remember that the brand links to the home
+# page - this just contains all the other links
 
 - name: Resume
   page: /assets/pdf/resume.pdf
-- name: CV
-  page: /assets/pdf/cv.pdf
 - name: Posts
   page: /post_listing/
