@@ -187,9 +187,9 @@ when written in Newton form.
 
 ### Evaluating Numerical Stability
 
-Let's say we fix the points @@x = \begin{pmatrix} x_0 & x_1 & \cdots &
+Let's say we fix the points @@x = \begin{pmatrix} x_0 & x_1 & \cdots \;
 \end{pmatrix}^\intercal@@ at which we're evaluating @@f@@ ahead of time. We'll
-sample to obtain @@y = \begin{pmatrix} y_0 & y_1 & \cdots &
+sample to obtain @@y = \begin{pmatrix} y_0 & y_1 & \cdots \;
 \end{pmatrix}^\intercal@@, and compute the interpolating polynomial @@p@@. Now
 let's say we want to approximate @@f@@ at some new point, so we evaluate @@p@@
 there. Unfortunately, the process of evaluating @@p@@ and even the process of
