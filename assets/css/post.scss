@@ -55,8 +55,11 @@ table {
 
 /* The header row should be centered and bold */
 /* We'll have a single border between the header and the body */
-thead {
-    text-align: center; /* Doesn't work with Jekyll's tables */
+thead th {
+    /* Jekyll's tables have inline styles for text-align */
+    /* We'll override them */
+    text-align: center !important;
+
     font-weight: bold;
     border-bottom: 1px solid var(--bs-secondary);
 }
