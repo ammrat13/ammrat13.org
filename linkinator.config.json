@@ -2,8 +2,10 @@
     "recurse": true,
     "timeout": 5000,
     "skip": [
+        "https://kit.fontawesome.com",
         "https://www.linkedin.com/in/ammar-ratnani",
         "https://\\w+.stackexchange.com",
+        "https://doi.org",
 
         "http://www.ecs.umass.edu/ece/koren/FaultTolerantSystems/simulator/Hamming/HammingCodes.html",
         "https://jeffe.cs.illinois.edu/teaching/497/08-polynomials.pdf",
