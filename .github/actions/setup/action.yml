@@ -1,5 +1,5 @@
 # Action to set up the build environment for this repository. You'll have to
-# clone the repository first, so we don't do that here.
+# clone the repository first; we don't do that here.
 
 name: "Setup"
 author: "Ammar Ratnani <ammrat13@gmail.com>"
