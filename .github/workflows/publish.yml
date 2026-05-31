@@ -10,6 +10,7 @@ on:
 jobs:
   publish:
     runs-on: "ubuntu-latest"
+    timeout-minutes: 2
     steps:
       # Use the GitHub Pages API to force a rebuild.
       - name: "Force site rebuild"
