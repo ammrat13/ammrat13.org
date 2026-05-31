@@ -3,23 +3,14 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+
+    "remoteUser": "ubuntu",
     "runArgs": [
         "--security-opt",
         "label=type:spc_t"
     ],
 
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "davidanson.vscode-markdownlint",
-                "medo64.render-crlf",
-                "shardulm94.trailing-spaces"
-            ]
-        }
-    },
-
-    "remoteUser": "ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {}
-    }
+    "forwardPorts": [
+        4000
+    ]
 }
