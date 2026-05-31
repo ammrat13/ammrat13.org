@@ -12,3 +12,5 @@ runs:
       uses: "JustinBeckwith/linkinator-action@v2"
       with:
         paths: "./_site/"
+        recurse: true
+        retry: true
