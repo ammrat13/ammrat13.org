@@ -9,12 +9,13 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: "ubuntu-latest"
+    timeout-minutes: 10
     steps:
 
       - name: "Checkout"
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@v6"
 
       - name: "Setup"
         uses: "./.github/actions/setup"
@@ -27,6 +28,9 @@ jobs:
           npx percy snapshot ./_site
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
+          PERCY_SKIP_UPDATE_CHECK: "true"
+        timeout-minutes: 5
 
       - name: "Check for broken links"
         uses: "./.github/actions/link-test"
+        timeout-minutes: 2

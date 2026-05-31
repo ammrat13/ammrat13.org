@@ -1,5 +1,5 @@
-FROM ubuntu:noble
-ARG BUNDLER_VERSION=2.5.22
+FROM ubuntu:resolute
+ARG BUNDLER_VERSION=4.0.12
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
