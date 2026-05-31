@@ -5,6 +5,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         locales \
         language-pack-en \
+        build-essential \
         ruby-full \
         npm && \
     rm -rf /var/lib/apt/lists/* && \
