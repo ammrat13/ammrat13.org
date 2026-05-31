@@ -3,6 +3,10 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "runArgs": [
+        "--security-opt",
+        "label=type:spc_t"
+    ],
 
     "customizations": {
         "vscode": {
