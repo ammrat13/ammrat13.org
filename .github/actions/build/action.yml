@@ -2,7 +2,7 @@
 
 name: "Generate HTML"
 author: "Ammar Ratnani <ammrat13@gmail.com>"
-description: "Generate the HTML for `ammrat13.github.io`"
+description: "Generate the HTML for `ammrat13.org`"
 
 runs:
   using: "composite"

@@ -6,9 +6,9 @@ github_username: ammrat13
 description: >-
     Ammar Ratnani's personal website. It's fairly minimal, containing little
     more than an about section and some blog posts.
-repository: "ammrat13/ammrat13.github.io"
+repository: "ammrat13/ammrat13.org"
 baseurl: "/"
-url: "https://ammrat13.github.io"
+url: "https://ammrat13.org"
 
 collections:
     # Collection for the "About Me" section. There's only one thing in it, but
