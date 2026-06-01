@@ -1,0 +1,9 @@
+# The post listing should not be indexed. Only the home page and each post
+# should be.
+User-agent: *
+Disallow: /post_listing/
+
+# We want to allow all AI use of this site.
+User-Agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
