@@ -3,7 +3,7 @@
 
 name: "Setup"
 author: "Ammar Ratnani <ammrat13@gmail.com>"
-description: "Set up the build environment for `ammrat13.github.io`"
+description: "Set up the build environment for `ammrat13.org`"
 
 runs:
   using: "composite"

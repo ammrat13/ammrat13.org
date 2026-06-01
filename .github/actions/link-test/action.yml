@@ -3,7 +3,7 @@
 
 name: "Test for Broken Links"
 author: "Ammar Ratnani <ammrat13@gmail.com>"
-description: "Test for broken links on `ammrat13.github.io` with `linkinator`"
+description: "Test for broken links on `ammrat13.org` with `linkinator`"
 
 runs:
   using: "composite"

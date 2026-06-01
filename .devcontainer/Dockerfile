@@ -12,7 +12,6 @@ RUN apt-get update && \
     gem install bundler --version ${BUNDLER_VERSION} --no-document
 
 # The posts use Unicode characters, so we need to configure a UTF-8 locale
-RUN \
-    locale-gen en_US.utf8 && \
-    update-locale LANG=en_US.utf8
+ENV LC_ALL=en_US.utf8
 ENV LANG=en_US.utf8
+ENV LANGUAGE=en_US.utf8
