@@ -2,6 +2,10 @@
 # should be.
 User-agent: *
 Disallow: /post_listing/
+# Obviously, the 404 page shouldn't be indexed. Note that requesting `404.html`
+# directly gives a 200 OK.
+User-agent: *
+Disallow: /404.html
 
 # We want to allow all AI use of this site.
 User-Agent: *
